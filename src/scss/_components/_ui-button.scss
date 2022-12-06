@@ -1,0 +1,32 @@
+// buttons
+.ui-button {
+  // default
+  &.ui-state-default {
+    background-color: $primary;
+    border-radius: 0;
+    color: $white;
+    transition: all 0.25s ease;
+    font-weight: bold;
+  }
+
+  &.ui-priority-secondary {
+    background-color: $secondary;
+  }
+
+  // hover
+  &.ui-state-hover {
+    color: $white;
+    font-weight: bold;
+    background-color: $warning;
+    border-radius: 0;
+  }
+
+  &:focus {
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $warning;
+  }
+
+}

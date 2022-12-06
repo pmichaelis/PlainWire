@@ -1,0 +1,113 @@
+@import "/wire/modules/AdminTheme/AdminThemeUikit/uikit-pw/pw.min.css";
+
+@import "_abstracts/_variables";
+@import "_abstracts/_mixins";
+
+// components
+@import "_components/_pw-masthead";
+@import "_components/_pw-notices";
+@import "_components/_pw-dropdown-menu";
+@import "_components/_pw-content";
+@import "_components/_pw-footer";
+
+@import "_components/_PageList";
+@import "_components/_description-list";
+@import "_components/_wiretabs";
+@import "_components/_InputfieldForm";
+@import "_components/_Inputfields";
+@import "_components/_ui-button";
+@import "_components/_tracy";
+
+
+// pages
+@import "_pages/_ProcessLogin";
+@import "_pages/_ProcessModule";
+@import "_pages/_ProcessPageListerPro";
+@import "_pages/_ProcessUser";
+@import "_pages/_ProcessField";
+@import "_pages/_ProcessPageEdit";
+
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: $font-sans-serif;
+  background: $body-bg;
+  font-size: $body-font-size;
+  color: $black;
+}
+
+#main {
+  margin-bottom: 20px !important;
+}
+
+
+
+// links
+.uk-link,
+a {
+  color: darken($secondary, 40%);
+}
+
+.uk-link:hover,
+a:hover {
+  color: darken($secondary, 40%);
+  text-decoration: underline;
+}
+
+// alert
+.uk-alert-primary {
+  background: $secondary;
+  color: $black;
+}
+
+// Menubuilder
+#MenuBuilderEdit {
+  .Inputfields .InputfieldPageAutocomplete ol .itemRemove,
+  .Inputfields .InputfieldPageListSelectMultiple ol .itemRemove {
+    margin: 7px 7px 0px 0px;
+  }
+
+  div.handle {
+    span.item_type {
+      font-size: 0.785em;
+      color: #9a9a9a;
+      margin-right: 0.5em;
+      float: left;
+      margin-top: 8px;
+    }
+
+    i.fa-trash {
+      position: relative;
+      border: none;
+      padding: 0.6em;
+      top: -2px !important;
+    }
+  }
+}
+
+// media manager
+.mm_main_wrapper {
+  // action label
+  #mm_action_select_label {
+    display: none;
+  }
+}
+
+.ht_master {
+  tr > td:nth-of-type(odd) {
+  }
+
+  tr > td:nth-of-type(even) {
+  }
+
+  tr > td {
+    padding: 5px;
+  }
+}
+
+

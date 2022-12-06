@@ -1,0 +1,141 @@
+.Inputfields {
+
+  $marginRight: 12px;
+  $padding: 10px;
+
+  // select
+  select.uk-select {
+    font-size: 1rem;
+    background-color: $gray-200;
+    border-color: $gray-400;
+    &:not(.uk-form-blank) {
+      background-color: $gray-100;
+      border-color: $gray-400;
+    }
+  }
+
+  .uk-input {
+  }
+
+  input:not([type="submit"]):not([type="file"]):not([type="checkbox"]):not([type="radio"]):not(.uk-form-blank),
+  .Inputfields textarea:not(.uk-form-blank) {
+    background-color: $gray-100;
+    border-color: $gray-400;
+  }
+
+  // repeater
+  .InputfieldRepeater .InputfieldContent .InputfieldRepeaterItem > .InputfieldHeader,
+  .pw-content .ui-widget-content li.ui-state-default,
+  .pw-content li.ui-state-default {
+    background: $secondary;
+    border-color: $secondary;
+    color: $white;
+    outline: none;
+  }
+
+  li.ui-state-default {
+    a {
+      color: $white !important;
+    }
+  }
+
+  // Fieldset
+  .InputfieldFieldset {
+    & > .InputfieldContent {
+      background-color: $gray-100;
+    }
+    & > .InputfieldHeader {
+      background-color: $gray-100;
+      padding: calc($padding * 2);
+    }
+  }
+
+  // Inputfield
+  .Inputfield {
+    // email
+    .FieldtypeEmail {
+      width: 100% !important;
+    }
+
+    // streetaddress
+    &.InputfieldStreetAddress {
+
+      .streetaddress_input_frame {
+        width: auto !important;
+        box-sizing: border-box;
+        float: none !important;
+      }
+
+      input {
+        @extend .uk-input;
+        font-size: 1rem !important;
+        font-family: $font-sans-serif !important;
+        background-color: $gray-100 !important;
+        border: 1px solid !important;
+        border-color: $gray-400 !important;
+        margin: 2px 0px $marginRight 0px !important;
+        padding: 0 $padding !important;
+        width: calc(100% - 2 * #{$padding}) !important;
+        box-sizing: border-box;
+        &:focus {
+          box-shadow: none !important;
+          outline: none !important;
+          border: 1px solid !important;
+          border-color: $gray-400 !important;
+        }
+      }
+
+      input.streetaddress_optional::placeholder {
+        font-size: 1rem !important;
+        font-family: $font-sans-serif !important;
+        text-align: left !important;
+      }
+
+      input.address_street_address_2_element,
+      input.address_street_address_3_element {
+        width: calc(100% - 2 * #{$padding}) !important;
+        // margin: 0 !important;
+      }
+
+      .streetaddress_icon {
+        display: none !important;
+      }
+
+      // selectize
+      .selectize-control {
+        width: 100% !important;
+
+        .selectize-dropdown {
+          font-size: 1rem !important;
+          font-family: $font-sans-serif !important;
+          background-color: $gray-100 !important;
+          border: 1px solid $gray-400 !important;
+        }
+      }
+
+      .selectize-input {
+        @extend .uk-input;
+        font-size: 1rem !important;
+        font-family: $font-sans-serif !important;
+        background-color: $gray-100 !important;
+        border: 1px solid !important;
+        border-color: $gray-400 !important;
+        margin: 2px 0px 0px 0px !important;
+        padding: $padding !important;
+        width: calc(100% - 2 * #{$padding}) !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+
+        #Inputfield_address_country_iso-selectized {
+          display: none !important;
+        }
+
+      }
+
+      .streetaddress_clearfix {
+        height: 0 !important;
+        margin: 0 !important;
+      }
+    }
+  }
+}

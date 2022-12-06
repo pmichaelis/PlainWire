@@ -1,0 +1,60 @@
+$padding: 30px;
+$margin: 20px;
+
+// Lister Pages
+.ProcessUser {
+    .lister_headline {
+        font-size: 1.4rem;
+        padding: 0 0 0.25em 0;
+        margin-top: 0 !important;
+        font-weight: bold;
+        color: $gray-dark;
+    }
+
+    #pw-content-body {
+        background: transparent;
+        padding: 0;
+    }
+
+    // Lister FieldsetTab
+    .InputfieldFieldset > .InputfieldContent,
+    .InputfieldFieldset > .InputfieldHeader {
+        background: $white;
+    }
+
+    // Lister table
+    .ProcessListerTable {
+        .tablesorter-header-inner {
+            color: $black;
+        }
+
+        // data table
+        .actions_toggle {
+            color: darken($secondary, 40%) !important;
+        }
+    }
+
+    // Lister Filter
+    #ProcessListerFiltersForm {
+        margin-bottom: 0;
+    }
+
+    // Lister Results
+    #ProcessListerResults {
+        padding: $padding;
+        margin: 0 $margin 0 0;
+        background-color: $white;
+
+        &.PageList {
+            margin: $margin 0 !important;
+        }
+    }
+
+    .InputfieldWrapper {
+        // padding: 0 calc($padding/2);
+        .Inputfield {
+            border: none;
+            outline: none;
+        }
+    }
+}

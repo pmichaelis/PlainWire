@@ -1,0 +1,31 @@
+// notices
+.pw-notices {
+    .NoticeMessage {
+        border: none;
+    }
+
+    .uk-alert-primary {
+        background: $warning;
+        color: $white;
+    }
+
+    .pw-notice-remove {
+        color: $white;
+        i.fa {
+            color: $white;
+        }
+    }
+
+    .pw-notice-group-toggle {
+        color: $white;
+        i.fa {
+            color: $white;
+        }
+    }
+
+    // warning
+    .uk-alert-warning {
+        background: $warning;
+        color: $white;
+    }
+}

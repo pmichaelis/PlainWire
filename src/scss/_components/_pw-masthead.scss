@@ -1,0 +1,97 @@
+// header
+#pw-masthead,
+#pw-masthead-mobile {
+  background-color: $body-color;
+  color: $white;
+
+  a.pw-logo-link {
+    display: none;
+    max-width: 150px;
+    margin-top: -5px;
+    margin-left: 20px;
+  }
+
+  img.pw-logo {
+    max-height: 30px;
+  }
+
+  // backend logo
+  img.pw-logo-native {
+    &:hover {
+      filter: none;
+    }
+  }
+
+  // navbar
+  .uk-navbar-nav {
+    & > li {
+      & > a {
+        color: $gray-300 !important;
+        transition: all 0.25s ease-in-out;
+        font-weight: bold;
+        i {
+          color: $gray-300 !important;
+        }
+        &:hover {
+          color: $gray-100;
+          &:after {
+            content: none;
+          }
+        }
+      }
+      &.uk-active {
+        position: relative;
+        & > a {
+          font-weight: bold;
+          color: $white !important;
+          &:hover {
+            color: $white;
+          }
+          &:after {
+            content: " ";
+            width: 100%;
+            height: 3px;
+            background: $primary;
+            border-style: solid;
+            border-width: 0px;
+            border-color: transparent transparent transparent;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 99;
+          }
+        }
+      }
+    }
+  }
+
+  // search
+  .pw-search-form {
+    .uk-form-icon {
+      color: $gray-100;
+    }
+
+    .pw-search-input {
+      border-color: $gray-100;
+      color: $gray-100;
+      opacity: 0.8;
+      transition: all 0.5s ease;
+      border-radius: 0;
+
+      &:focus {
+        border-color: $gray-100;
+        background: transparent;
+        opacity: 1;
+      }
+    }
+  }
+
+  // user icon
+  .uk-navbar-nav > li > a i {
+    color: $white;
+  }
+
+  a#tools-toggle {
+    text-transform: lowercase;
+  }
+}

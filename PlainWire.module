@@ -1,0 +1,50 @@
+<?php
+
+namespace ProcessWire;
+
+class PlainWire extends WireData implements Module
+{
+
+    public static function getModuleinfo()
+    {
+        return array(
+            'title' => 'PlainWire',
+            'summary' => 'PlainWire - Plain Admin Theme',
+            'author' => 'Philipp Michaelis',
+            'icon' => 'heart-o',
+            'version' => 1,
+            'autoload' => 'template=admin',
+            'singular' => true,
+            'requires' => array('AdminThemeUikit'),
+        );
+    }
+
+    public function __construct()
+    {
+
+        $autoloads = array(
+            __DIR__ . '/vendor/autoload.php',
+        );
+
+        foreach ($autoloads as $autoload) {
+            if (file_exists($autoload)) {
+                require_once $autoload;
+            }
+        }
+    }
+
+    /**
+     *  ProcessWire API is ready
+     */
+    public function ready()
+    {
+
+        $this->addHookBefore('AdminTheme::getExtraMarkup', function (HookEvent $event) {
+            $config = $this->wire->config;
+            $url = $config->urls($this);
+            $config->styles->add($url . 'dist/css/PlainWire.css');
+            $config->scripts->add($url . "dist/js/PlainWire.js");
+        });
+
+    }
+}

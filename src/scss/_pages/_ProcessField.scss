@@ -1,0 +1,44 @@
+$padding: 20px;
+$margin: 20px;
+$fontSize: 1rem;
+$fontSizeSmall: 0.8rem;
+
+.ProcessField {
+    #pw-content-body {
+        background: transparent;
+        padding: 0;
+    }
+
+    .InputfieldWrapper {
+        padding: $padding;
+        .Inputfield {
+            // border: none;
+            // outline: none;
+            outline: solid 1px $gray-200;
+        }
+    }
+
+    // section
+    .modules_section {
+        
+        // section title
+        h2 {
+            font-size: 1.4rem;
+            padding: calc($padding/2) 0 calc($padding/2) 0;
+            margin-top: 0 !important;
+            font-weight: bold;
+            color: $gray-dark;
+        }
+
+        & > .pw-table-responsive {
+            margin-bottom: $margin;
+        }
+
+        .module-summary {
+            font-size: $fontSizeSmall;
+        }
+
+
+    }
+
+}

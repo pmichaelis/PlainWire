@@ -1,0 +1,39 @@
+// description list
+.uk-description-list {
+    margin: 5px 5px 10px 5px;
+
+    // list divider
+    & > dt:nth-child(n + 2) {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid $gray-200;
+    }
+
+    dd {
+        font-size: 0.9rem;
+        color: $gray-600;
+    }
+
+    & > dt {
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-transform: none;
+    }
+
+    a {
+        color: $gray-dark;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        i.fa {
+            // display: none;
+            color: $gray-dark;
+            float: left !important;
+            font-size: 1.4rem;
+            margin: 13px 20px 13px 10px;
+            opacity: 1;
+        }
+    }
+}

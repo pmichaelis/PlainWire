@@ -1,0 +1,19 @@
+$fontSize: 0.9rem;
+
+.pw-dropdown-menu {
+
+    &.ui-menu {
+        border: none;
+        font-size: $fontSize;
+
+        .ui-menu-item {
+            a {
+                color: $gray-600;
+                i.fa {
+                    color: $gray-600;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,16 @@
+#pw-footer {
+    margin: 0 !important;
+    color: $muted;
+
+    .uk-text-muted {
+        color: $muted !important;
+    }
+
+    a {
+        color: $muted;
+        &:hover {
+            color: $gray-600;
+        }
+    }
+
+}

@@ -1,0 +1,64 @@
+// PageList
+#PageListContainer {
+
+    // Pagelist
+    .PageList {
+        margin: 5px !important;
+        .PageListItem {
+            padding: 10px;
+            border-bottom: 1px solid $gray-300;
+            font-size: 1.1em;
+
+            a {
+                color: $dark;
+            }
+
+            a.PageListPage {
+                color: $dark;
+                &:hover {
+                    color: $secondary;
+                }
+                i {
+                    color: $secondary;
+                }
+            }
+
+            // hover state
+            &.PageListItemHover {
+                a.PageListPage {
+                    color: $secondary;
+                }
+            }
+
+            // open state
+            &.PageListItemOpen {
+                background: transparent;
+                a.PageListPage {
+                    color: $black;
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+            }
+
+            &.PageListItemOpen {
+                // font-weight: bold;
+            }
+        }
+
+        // actions
+        .PageListActions,
+        .PageListerActions {
+            a {
+                color: $white;
+                background: $primary;
+                border-radius: 0;
+                &:hover {
+                    background: $orange;
+                    color: $white;
+                }
+            }
+        }
+    }
+    
+}

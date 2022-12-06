@@ -1,0 +1,103 @@
+$padding: 20px;
+$maxWidth: 400px;
+$fontSize: 1rem;
+$fontSizeSmall: 0.8rem;
+
+// Login Page
+.ProcessLogin {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: $fontSize;
+
+    #pw-mastheads {
+        display: none;
+    }
+
+    #pw-content-body {
+        background: transparent;
+    }
+
+    // login form
+    #ProcessLoginForm {
+        background: $white;
+        width: auto;
+        max-width: $maxWidth;
+        padding: calc($padding * 2);
+        @include boxShadow();
+
+        .Inputfields {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .InputfieldHeader {
+            display: inline-block;
+            padding-bottom: calc($padding/3);
+            font-size: $fontSizeSmall;
+            color: $gray-500;
+        }
+
+        .Inputfield {
+            text-align: left;
+            font-size: $fontSize;
+        }
+
+        .InputfieldContent {
+            background: #fff;
+            padding: 0px 0px $padding 0px;
+        }
+
+        // login name wrapper
+        #wrap_login_name {
+            .InputfieldHeader {
+                @extend .InputfieldHeader;
+            }
+            input {
+                @extend .Inputfield;
+            }
+        }
+
+        // login pass wrapper
+        #wrap_login_pass {
+            .InputfieldHeader {
+                @extend .InputfieldHeader;
+            }
+            input {
+                @extend .Inputfield;
+            }
+        }
+
+        // login submit wrapper
+        #wrap_Inputfield_login_submit {
+            .InputfieldContent {
+                padding: 0;
+            }
+
+            // login submit
+            #Inputfield_login_submit {
+                font-size: $fontSize;
+                font-weight: bold;
+            }
+        }
+    }
+
+    // login links
+    .pw-login-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $fontSizeSmall;
+        a {
+            color: $muted;
+            display: inline-block;
+            margin: 0 calc($padding/4);
+            &:hover {
+                color: $gray-600;
+            }
+        }
+    }
+}

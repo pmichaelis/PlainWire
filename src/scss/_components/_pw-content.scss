@@ -1,0 +1,46 @@
+$padding: 20px;
+
+// content
+.pw-content {
+
+    #pw-content-head {
+    }
+
+    #pw-content-title {
+        font-size: 1.6rem;
+        padding: 0.3em 20px;
+        font-weight: bold;
+        color: $gray-dark;
+    }
+
+    li {
+        &.ui-state-default {
+            background: $primary;
+            border-color: $primary;
+            color: $white;
+            &:hover {
+                background-color: darken($secondary, 10%);
+            }
+        }
+        &.ui-state-hover {
+            background-color: darken($secondary, 10%);
+            border-color: darken($secondary, 10%);
+        }
+    }
+
+    #pw-content-body {
+        background-color: $white;
+        padding: 20px;
+
+        // section title
+        h2 {
+            font-size: 1.4rem;
+            padding: calc($padding/2) 0 calc($padding/2) 0;
+            margin-top: 0 !important;
+            font-weight: bold;
+            color: $gray-dark;
+        }
+
+    }
+
+}

@@ -1,0 +1,32 @@
+$padding: 20px;
+$margin: 20px;
+$fontSize: 1rem;
+$fontSizeSmall: 0.8rem;
+
+.ProcessModule {
+    #pw-content-body {
+        background: transparent;
+        padding: 0;
+    }
+
+    .InputfieldWrapper {
+        padding: $padding;
+        @include boxShadow();
+        .Inputfield {
+            border: none;
+            outline: none;
+        }
+    }
+
+    // section
+    .modules_section {
+
+        & > .pw-table-responsive {
+            margin-bottom: $margin;
+        }
+
+        .module-summary {
+            font-size: $fontSizeSmall;
+        }
+    }
+}

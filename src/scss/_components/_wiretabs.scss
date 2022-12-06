@@ -1,0 +1,24 @@
+// tabs
+.uk-tab {
+    & > * > a {
+      color: $secondary;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  
+    .uk-active {
+      // border: none;
+      a {
+        font-weight: bold;
+        // border: none;
+        border-radius: 0;
+      }
+
+      &.pw-tab-muted {
+          background-color: $white !important;
+      }
+    }
+
+
+  }
